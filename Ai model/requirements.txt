@@ -1,0 +1,13 @@
+deepface
+opencv-python 
+mtcnn 
+numpy 
+pandas 
+matplotlib
+scikit-learn
+tf-keras
+fastapi
+uvicorn
+python-multipart
+gradio
+pillow

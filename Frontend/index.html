@@ -1,102 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attendance Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <div class="dashboard-title">Course Id</div>
-            <div class="search-bar">
-                <input type="text" placeholder="Select Course ID">
-            </div>
-            <div class="profile">
-                <p>Admin Name</p>
-                <p>admin@mnit.ac.in</p>
-            </div>
-        </header>
-
-        <section class="stats">
-            <div class="stat-box">
-                <p id="current-time"></p>
-                <p>Today: <b id="current-date"></b></p>
-            </div>
-
-            <div class="stat-box1">
-                <p class="value">39</p>
-                <p><b>Total Student</b></p>
-            </div>
-            <div class="stat-box">
-                <p class="value">6</p>
-                <p>Absent</p>
-                <p>🟢 -10% Less than yesterday</p>
-            </div>
-            <div class="stat-box">
-                <p class="value">33</p>
-                <p>Present</p>
-                <p>🔺 +3% Increase than yesterday</p>
-            </div>
-        </section>
-
-        <section class="chart">
-            <canvas id="attendanceChart"></canvas>
-        </section>
-
-        <section class="attendance-overview">
-            <div class="header">
-                <input type="text" placeholder="Quick Search by ID" class="search-box">
-
-                <div class="date-picker">
-                    <label for="date">Date</label>
-                    <input type="date" id="date" value="2025-03-08">
-                </div>
-
-                <div class="sort-by">
-                    <label for="sort-options">Sort by:</label>
-                    <select id="sort-options">
-                        <option value="id" selected>Student ID (Default)</option>
-                        <option value="name">Student Name</option>
-                        <option value="attendance-asc">Attendance (Ascending)</option>
-                        <option value="attendance-desc">Attendance (Descending)</option>
-                        <option value="less-than-75">Attendance < 75%</option>
-                    </select>
-                </div>
-            </div>
-
-            <table id="attendance-table">
-                <thead>
-                <tr>
-                    <th>Student ID</th>
-                    <th>Student Name</th>
-                    <th>Date</th>
-                    <th>Present</th>
-                    <th>Total Attendance</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>2023uai1797</td>
-                    <td>Mayank Garg</td>
-                    <td>8 March 2025</td>
-                    <td>✅ Yes</td>
-                    <td>85%</td>
-                </tr>
-                <tr>
-                    <td>2023uai1801</td>
-                    <td>Mahak </td>
-                    <td>8 March 2025</td>
-                    <td>❌ No</td>
-                    <td>60%</td>
-                </tr>
-                </tbody>
-            </table>
-        </section>
-    </div>
-
-    <script src="scripts.js"></script>
-</body>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=login.html" />
+    <script>window.location.href = "loginpage/login.html";</script>
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    If you are not redirected automatically, <a href="loginpage/login.html">click here</a>.
+  </body>
 </html>

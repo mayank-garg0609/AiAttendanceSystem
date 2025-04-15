@@ -1,0 +1,293 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4a90e2;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    min-height: 80px;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+/* Student Name & ID */
+#student_name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#student_email {
+    font-size: 14px;
+    color: #ecf0f1;
+    margin: 0;
+}
+
+/* Logout Button - Smaller and Properly Aligned Below */
+.logout-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 45px;
+    width: 100px;
+    text-align: center;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+/* Stat Box */
+.stat-box {
+    background-color: #f9fafb;
+    padding: 20px;
+    border-radius: 12px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Stat Box Value */
+.stat-box .value {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #2ecc71;
+}
+
+/* Updated Styling for Total Attendance Percentage */
+#total-attendance {
+    font-size: 80px; /* Increased font size */
+    font-weight: bold;
+    color: #f39c12; /* Bright orange color */
+    margin-top: 10px;
+    padding: 20px;
+    border: 2px solid #f39c12;
+    border-radius: 12px;
+    background-color: #fffaf0; /* Light background */
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add a hover effect for interaction */
+#total-attendance:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(243, 156, 18, 0.6);
+}
+
+/* Stat Box Text */
+.stat-box p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Warning Box */
+.stat-box.warning {
+    background-color: #ffebee;
+    color: red;
+}
+
+/* Chart Section */
+.chart {
+    margin-top: 20px;
+}
+
+/* Chart Canvas */
+canvas {
+    width: 100% !important;
+    height: 400px !important;
+}
+
+/* Sort Options */
+.sort-options {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    background-color: #f9fafb;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sort Options Label */
+.sort-options label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Sort Options Input and Select */
+.sort-options select,
+.sort-options input {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fff;
+    width: 200px;
+}
+
+/* Attendance Overview */
+.attendance-overview {
+    margin-top: 20px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header and Data */
+th,
+td {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+th {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+}
+
+/* Alternate Row Color */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover Effect on Rows */
+tr:hover {
+    background-color: #e3f2fd;
+    cursor: pointer;
+}
+
+/* Current Time Styling */
+#current-time {
+    font-size: 40px;
+    font-weight: bold;
+    color: #4A90E2;
+    display: inline-block;
+    animation: 1s ease-in infinite;
+}
+
+/* Flip Animation for Time */
+@keyframes flip {
+    0% { transform: rotateX(0deg); }
+    50% { transform: rotateX(180deg); }
+    100% { transform: rotateX(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stat-box {
+        width: 100%;
+    }
+
+    .sort-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: auto;
+    }
+
+    .profile {
+        margin-top: 10px;
+        align-items: flex-start;
+        position: static;
+        gap: 5px;
+    }
+
+    .logout-btn {
+        margin-top: 5px;
+        align-self: flex-start;
+        width: auto;
+    }
+}
+.sort-options{
+  display: flex;
+  align-items: center; /* Vertically aligns label and select */
+  gap: 10px;            /* Space between label and dropdown */
+  padding: 10px 0;
+
+}

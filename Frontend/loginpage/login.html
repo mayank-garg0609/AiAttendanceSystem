@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="logo">
+        <img src="logo.png" alt="Company Logo">
+    </div>
+
+    <div class="login-container">
+        <div class="login-box">
+            
+            <h2>Login</h2>
+<!-- Login Form -->
+<form class="login-form">
+  <label>Email</label>
+  <input type="email" placeholder="Enter your email" required>
+  <p class="error-message email-error"></p>
+
+  <label>Password</label>
+  <input type="password" placeholder="Enter your password" required>
+  <p class="error-message password-error"></p>
+
+
+  <div class="button-group">
+      <button type="button" class="user-btn student-btn">Login as Student</button>
+      <button type="button" class="user-btn teacher-btn">Login as Teacher</button>
+  </div>
+
+  <a href="#" class="forgot-password">Forgot Password?</a>
+
+  <button type="submit" class="login-button">Login</button>
+</form>
+
+<!-- Forgot Password Flow -->
+<form class="forgot-form" style="display: none; flex-direction: column; align-items: flex-start;">
+  
+    <!-- STEP 1: Email & Role -->
+    <div class="fp-step step-1">
+      <label>Email</label>
+      <input type="email" class="fp-email" placeholder="Enter your email" required>
+      <p class="error-message fp-email-error"></p>
+
+  
+      <label>Select Role</label>
+      <div class="button-group">
+        <button type="button" class="user-btn fp-student-btn">Student</button>
+        <button type="button" class="user-btn fp-teacher-btn">Teacher</button>
+      </div>
+  
+      <button type="button" class="login-button send-otp-btn">Send OTP</button>
+    </div>
+  
+    <!-- STEP 2: OTP -->
+<div class="fp-step step-2" style="display: none;">
+  <label>Enter OTP</label>
+  <input type="text" class="fp-otp" placeholder="Enter OTP">
+  <p class="error-message fp-otp-error"></p>
+
+  <button type="button" class="login-button verify-otp-btn">Verify OTP</button>
+
+  <!-- Send OTP Again Button -->
+  <button type="button" class="send-again-btn" style="margin-top: 10px;">Send OTP Again</button>
+</div>
+
+  
+    <!-- STEP 3: Reset Password -->
+    <div class="fp-step step-3" style="display: none;">
+      <label>New Password</label>
+      <input type="password" class="fp-new-pass" placeholder="Enter new password">
+      <p class="error-message fp-new-pass-error"></p>
+  
+      <label>Confirm Password</label>
+      <input type="password" class="fp-confirm-pass" placeholder="Confirm new password">
+      <p class="error-message fp-confirm-pass-error"></p>
+
+  
+      <button type="button" class="login-button reset-pass-btn">Reset Password</button>
+    </div>
+  
+    <a href="#" class="back-to-login" style="margin-top: 15px;">← Back to Login</a>
+  </form>
+  
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
