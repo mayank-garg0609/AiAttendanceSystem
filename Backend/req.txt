@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+passlib
+bcrypt
+python-jose
+requests
+python-multipart
+gradio-client
+Pillow
+python-dotenv

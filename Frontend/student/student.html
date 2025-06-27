@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Dashboard</title>
+    <link rel="stylesheet" href="student.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div class="dashboard-title">Student Dashboard</div>
+            <div class="profile">
+                <p id="student_name">Name</p>
+                <p id="student_email">Email</p>
+            </div>
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </header>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="stat-box">
+                <p id="current-time"></p>
+                <p>Today: <b id="current-date"></b></p>
+            </div>
+            <div class="stat-box" id="low-attendance-box">
+                <p>Courses Below 75% Attendance</p>
+                <p class="value" id="low-attendance-courses">0</p>
+                <p id="attendance-warning"></p>
+            </div>
+
+            <div class="stat-box">
+                <p>Total Courses</p>
+                <p class="value" id="total-courses">0</p>
+            </div>
+        </section>
+
+        <!-- Chart Section -->
+        <section class="chart">
+            <canvas id="attendanceChart"></canvas>
+        </section>
+
+        <!-- Date and Course Filter Section -->
+        <section class="sort-options">
+            <label for="course-selector">Select Course:</label>
+            <select id="course-selector"></select>
+        </section>
+
+        <!-- Attendance Table Section -->
+        <section class="attendance-overview">
+            <table id="attendance-table">
+                <thead>
+                    <tr>
+                        <th>Course ID</th>
+                        <th>Course Name</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Attendance Data Dynamically Inserted Here -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="student.js"></script>
+</body>
+
+</html>

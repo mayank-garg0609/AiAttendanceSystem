@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Dashboard</title>
+    <link rel="stylesheet" href="teacher.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div id="modal-overlay" class="modal-overlay">
+                <div class="modal-box">
+                  <span class="close-btn" id="close-modal">&times;</span>
+              
+                  <div class="modal-header">
+                    <i class="fa fa-camera"></i>
+                    <span>Upload Classroom Image</span>
+                  </div>
+                  <div class="upload-box" id="drop-area">
+                    <!-- <input type="file" id="classroom-image" accept="image/*" hidden> -->
+                    <input type="file" id="classroom-image" accept="image/*" hidden multiple>
+
+                    <label for="classroom-image" class="upload-label">
+                      <i class="fa fa-cloud-upload" style="font-size: 28px;"></i><br>
+                      <!-- <span id="upload-text">Click to upload image or drag and drop</span> -->
+                      <span id="upload-text">Click to upload one or more images or drag and drop</span>
+
+                    </label>
+                </div>
+                <!-- changes -->
+                <div class="upload-preview" id="upload-preview"></div>
+
+                  <button id="process-btn">
+                    <i class="fa fa-play"></i> Process Images
+                  </button>
+                </div>
+              </div>
+              <!-- changes -->
+              <div id="fullscreen-results" class="fullscreen-overlay" style="display: none;">
+                <span class="close-results-btn" onclick="closeResults()">×</span>
+                <h2 class="results-title">Model Output</h2>
+                <div id="fullscreen-image-grid" class="fullscreen-grid">
+                  <!-- Images will be inserted here dynamically -->
+                </div>
+              </div>
+              
+
+
+
+        <div class="title-container">
+
+        <div style="display: flex; align-items: center;">
+        <!-- Hamburger Menu -->
+        <div  class="hamburger" id="hamburger-menu"style="cursor: pointer; margin-right: 15px;">
+            &#9776; <!-- Unicode hamburger icon -->
+        </div>
+
+        <!-- Dashboard Title -->
+        <div class="dashboard-title">Teacher Dashboard</div>
+        </div>
+
+                <!-- Dropdown for selecting courses -->
+                <div class="search-bar">
+                    
+                    <select id="courseDropdown">
+                        <option value="">Select Course ID</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="profile">
+                <p id="faculty_name">Name</p>
+                <p id="faculty_email">Email</p>
+            </div>
+
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </header>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="stat-box">
+                <p id="current-time"></p>
+                <p>Today: <b id="current-date"></b></p>
+            </div>
+            <div class="stat-box" style="padding-top: 30px; text-align: center; font-size: 17px;">
+                <p id="total_student">-</p>
+                <p  ><b>Total Students</b></p>
+            </div>
+            <div class="stat-box">
+                <p id="absent">-</p>
+                <p >Absent</p>
+                <p id="ab_percent">🟢 0% Less than yesterday</p>
+            </div>
+            <div class="stat-box">
+                <p id="present">-</p>
+                <p >Present</p>
+                <p id="pre_percent">🔺 0% Increase than yesterday</p>
+            </div>
+        </section>
+
+        <!-- Chart Section -->
+        <section class="chart">
+            <canvas id="attendanceChart"></canvas>
+        </section>
+
+        <!-- Attendance Overview Section -->
+        <section class="attendance-overview">
+            <div class="header">
+                <input type="text" id="search-id" placeholder="Quick Search by ID" class="search-box">
+
+                <div class="date-picker">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" >
+                </div>
+                <div class="sort-by">
+                    <label for="sort-options">Sort by:</label>
+                    <select id="sort-options">
+                        <option value="id" selected>Student ID </option>
+                        <option value="name">Student Name</option>
+                        <option value="attendance-asc">Attendance (Ascending)</option>
+                        <option value="attendance-desc">Attendance (Descending)</option>
+                        <option value="less-than-75">Attendance < 75%</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Attendance Table -->
+            <table id="attendance-table">
+                <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Date</th>
+                    <th>Present</th>
+                    <th>Total Attendance</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="teacher.js"></script>
+</body>
+</html>
