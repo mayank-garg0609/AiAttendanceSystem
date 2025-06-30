@@ -14,6 +14,10 @@
 
 > You can log in as either a **teacher** or a **student** using the same credentials:
 
+🔗 **AI model:** [hugging space](https://huggingface.co/spaces/mayankgarg0609/AiAttendance)
+- `Download photo from photo/test`
+- `Upload any image to the model demo — it will detect the face and display the unique student ID linked to that person.`
+
 ---
 
 
